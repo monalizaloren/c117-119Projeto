@@ -67,7 +67,8 @@ timerCounter = 0;
 timerCheck = "";
 drawnSketch = "";
 answerHolder = "";
-score = 0;
+//crie a variável 'score' que guardará a pontuação 0
+//???
 
 function updateCanvas() {
   background("white");
@@ -91,11 +92,11 @@ function setup() {
 
 function draw() {
   //definir peso do traço como 10
-  strokeWeight(13);
+  strokeWeight(???);
   //definir cor do traço como preta
-  stroke(0);
-  //Se o mouse for pressionado, desenhe uma linha entre as posições anterior e atual do mouse
-  if (mouseIsPressed) {
+  stroke(???);
+  //Se (if) o mouse for pressionado (mouseIsPressed)
+ ??? {
     line(pmouseX, pmouseY, mouseX, mouseY);
   }
 
@@ -104,7 +105,8 @@ function draw() {
   {
     answerHolder = "set"
     score++;
-    document.getElementById('score').innerHTML = 'Pontuação: ' + score;
+    //Utilize o código que altera o HTML
+    document.getElementById('score').??? = 'Pontuação: ' + score;
   }
 
 }
@@ -114,9 +116,10 @@ function classifyCanvas() {
 }
 
 function gotResult(error, results) {
-  if (error) {
-    console.error(error);
-  }
+  //Programe que...
+  //Se acontecer um erro, mostre esse erro no console
+  //???
+  
   console.log(results);
   drawnSketch = results[0].label;
   document.getElementById('label').innerHTML = 'Seu esboço: ' + drawnSketch.replace("_", " ");
@@ -127,12 +130,14 @@ function gotResult(error, results) {
 
 function checkSketch()
 {
-  timerCounter++;
-  document.getElementById('time').innerHTML = 'Tempo: ' + timerCounter;
+  //Use o código 'timerCounter++' para iniciar uma contagem de segundos
+  //???
+  //Mostre o timerCounter no html
+  document.getElementById('time').innerHTML = 'Tempo: ' + ???;
   console.log(timerCounter)
-  if(timerCounter > 400)
-    {
-      timerCounter = 0;
+  //programe que...
+  //Se o timeCounter for maior que 400, altere o timerCounter para 0
+ //???
       timerCheck = "completed"
     }
     if(timerCheck =="completed" || answerHolder == "set")
